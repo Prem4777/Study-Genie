@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Study Assistant</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'crayon-blue': '#3D7DCA',
+              'crayon-yellow': '#FDCB46',
+              'crayon-green': '#5AAB61',
+              'crayon-red': '#E5555C',
+              'light-gray': '#D1D5DB',
+              'dark-gray': '#374151',
+              'bg-light': '#F9FAFB',
+              'bg-dark': '#000000',
+            },
+            typography: ({ theme }) => ({
+              DEFAULT: {
+                css: {
+                  '--tw-prose-body': theme('colors.dark-gray'),
+                  '--tw-prose-headings': theme('colors.dark-gray'),
+                  '--tw-prose-links': theme('colors.crayon-blue'),
+                  '--tw-prose-bold': theme('colors.dark-gray'),
+                  '--tw-prose-quotes': theme('colors.dark-gray'),
+                  '--tw-prose-quote-borders': theme('colors.light-gray'),
+                  '--tw-prose-invert-body': theme('colors.bg-light'),
+                  '--tw-prose-invert-headings': theme('colors.white'),
+                  '--tw-prose-invert-links': theme('colors.crayon-yellow'),
+                  '--tw-prose-invert-bold': theme('colors.white'),
+                  '--tw-prose-invert-quotes': theme('colors.bg-light'),
+                  '--tw-prose-invert-quote-borders': theme('colors.light-gray'),
+                },
+              },
+            }),
+            keyframes: {
+              flip: {
+                'from': { transform: 'rotateY(0deg)' },
+                'to': { transform: 'rotateY(180deg)' },
+              },
+               flipBack: {
+                'from': { transform: 'rotateY(180deg)' },
+                'to': { transform: 'rotateY(0deg)' },
+              },
+              slideOut: {
+                'to': { transform: 'translateX(var(--slide-out-to, -100%))', opacity: '0' },
+              },
+              slideIn: {
+                'from': { transform: 'translateX(var(--slide-in-from, 100%))', opacity: '0' },
+                'to': { transform: 'translateX(0)', opacity: '1' },
+              },
+            },
+            animation: {
+              flip: 'flip 0.6s ease-in-out',
+              flipBack: 'flipBack 0.6s ease-in-out',
+              slideOut: 'slideOut 0.3s ease-in forwards',
+              slideIn: 'slideIn 0.3s ease-in forwards',
+            },
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "recharts": "https://esm.sh/recharts@^3.1.2",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.44.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-bg-light dark:bg-bg-dark text-dark-gray dark:text-gray-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
