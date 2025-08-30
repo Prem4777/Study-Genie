@@ -1,20 +1,71 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+Study Genie
+===========
 
-# Run and deploy your AI Studio app
+Study Genie is an AI-powered web application that leverages Large Language Models (LLMs) to help students and professionals convert their learning materials into interactive and digestible formats.
 
-This contains everything you need to run your app locally.
+Key Features
+------------
 
-View your app in AI Studio: https://ai.studio/apps/drive/18xvRccqJAgWw0XYP7r9yyFd3XRiQ-CpB
+*   **Smart Content Processing**: Upload PDFs, images, or enter plain text to generate:  - Summaries    - Flashcards    - Quizzes  
+    
+*   **AI Chatbot**: Interact with an intelligent assistant for instant Q&A and explanations.  
+    
+*   **Dashboard & User Profile**:  - Tracks your notes, history, and progress    - Displays interactive graphs for study analytics  
+    
+*   **Seamless User Experience** with modern web technologies (React & Tailwind).  
+    
 
-## Run Locally
+Project Configuration
+---------------------
 
-**Prerequisites:**  Node.js
+*   **Frontend:** React.js with Tailwind CSS  
+    
+*   **Backend & Database:** Supabase  
+    
+*   **LLM Integration:** Gemini API  
+    
 
+### Required Environment Variables
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Create a .env.local file in the root directory and add:
+
+Bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   GEMINI_API_KEY=your_gemini_api_key_here   `
+
+In your Supabase configuration file (e.g., src/supabase/services.js), add:
+
+JavaScript
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   const SUPABASE_URL = "your_supabase_url";  const SUPABASE_ANON_KEY = "your_supabase_anon_key";  const SUPABASE_API_KEY = "your_supabase_api_key";   `
+
+Run Locally
+-----------
+
+### Prerequisites
+
+You must have **Node.js** installed.
+
+1.  Bashgit clone https://github.com/Prem4777/Study-Genie.gitcd Study-Genie
+    
+2.  **Set environment variables:**Add your API keys as described in the configuration section above.
+    
+3.  Bashnpm install
+    
+4.  Bashnpm run dev
+    
+
+Contributing
+------------
+
+Contributions are welcome!
+
+1.  **Fork** the repository.
+    
+2.  **Create a new branch** (feature-branch-name).
+    
+3.  **Commit your changes**.
+    
+4.  **Push to the branch**.
+    
+5.  **Open a Pull Request**.
